@@ -1,22 +1,28 @@
 #!/usr/bin/bash
 
-if [ "$(id -u)" -e 0 ]; then
-    echo "This script must not be run as root." >&2
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root." >&2
     exit 1
 fi
 
-sudo cp ./suspend-mods.sh /usr/local/bin/suspend-mods
-sudo cp ./resume-mods.sh /usr/local/bin/resume-mods
+cat <<EOF > "/etc/device-quirks/systemd-suspend-mods.conf"
+bmi260_i2c
+bmi260_core
+EOF
 
-sudo chmod +x /usr/local/bin/suspend-mods
-sudo chmod +x /usr/local/bin/resume-mods
 
-sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
-sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
+cp ./suspend-mods.sh /usr/local/bin/suspend-mods
+cp ./resume-mods.sh /usr/local/bin/resume-mods
 
-sudo cp gyro-resume-fix.service /etc/systemd/system
-sudo cp gyro-suspend-fix.service /etc/systemd/system
+chmod +x /usr/local/bin/suspend-mods
+chmod +x /usr/local/bin/resume-mods
 
-sudo systemctl daemon-reload
-sudo systemctl enable --now gyro-resume-fix.service
-sudo systemctl enable --now gyro-suspend-fix.service
+chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
+chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
+
+cp gyro-resume-fix.service /etc/systemd/system
+cp gyro-suspend-fix.service /etc/systemd/system
+
+systemctl daemon-reload
+systemctl enable --now gyro-resume-fix.service
+systemctl enable --now gyro-suspend-fix.service
