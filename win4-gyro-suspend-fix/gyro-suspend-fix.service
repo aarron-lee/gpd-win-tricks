@@ -1,0 +1,11 @@
+[Unit]
+Description=On Sleep disable gyro
+Before=suspend.target
+
+[Service]
+ExecStart=/usr/local/bin/suspend-mods
+User=root
+
+[Install]
+WantedBy=suspend.target
+

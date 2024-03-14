@@ -1,0 +1,11 @@
+[Unit]
+Description=On Sleep disable gyro
+After=suspend.target
+
+[Service]
+ExecStart=/usr/local/bin/resume-mods
+User=root
+
+[Install]
+WantedBy=suspend.target
+
