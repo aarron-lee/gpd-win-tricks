@@ -4,9 +4,8 @@
 # insmod them on resume.
 # Originally created by ChimeraOS
 
-MOD_LIST=$(grep -v ^\# /etc/device-quirks/systemd-suspend-mods.conf)
 
-for mod in $MOD_LIST; do
-    modprobe $mod
-done
+modprobe bmi260_i2c
+modprobe bmi260_core
+
 
