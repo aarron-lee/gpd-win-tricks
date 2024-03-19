@@ -16,6 +16,8 @@ git clone https://github.com/aarron-lee/gpd-win-tricks.git
 
 cd gpd-win-tricks/win4-gyro-suspend-fix
 
+sudo touch /etc/device-quirks/systemd-suspend-mods.conf
+
 sudo cat <<EOF > "/etc/device-quirks/systemd-suspend-mods.conf"
 bmi260_i2c
 bmi260_core
