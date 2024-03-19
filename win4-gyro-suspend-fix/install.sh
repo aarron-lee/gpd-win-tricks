@@ -1,9 +1,15 @@
 #!/usr/bin/bash
 
 if [ "$(id -u)" -ne 0 ]; then
-    echo "This script must be run as root." >&2
+    echo "This script must be run as root. use sudo" >&2
     exit 1
 fi
+
+cd /tmp
+
+git clone https://github.com/aarron-lee/gpd-win-tricks.git
+
+cd gpd-win-tricks/win4-gyro-suspend-fix
 
 cat <<EOF > "/etc/device-quirks/systemd-suspend-mods.conf"
 bmi260_i2c
@@ -26,3 +32,7 @@ cp gyro-suspend-fix.service /etc/systemd/system
 systemctl daemon-reload
 systemctl enable --now gyro-resume-fix.service
 systemctl enable --now gyro-suspend-fix.service
+
+echo "installation complete!"
+
+rm -rf /tmp/gpd-win-tricks
