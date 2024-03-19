@@ -35,6 +35,10 @@ sudo chmod +x /usr/local/bin/resume-mods
 sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
 sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
 
+# disable services if they already exist
+sudo systemctl disable --now gyro-resume-fix.service
+sudo systemctl disable --now gyro-suspend-fix.service
+
 sudo cp gyro-resume-fix.service /etc/systemd/system
 sudo cp gyro-suspend-fix.service /etc/systemd/system
 
