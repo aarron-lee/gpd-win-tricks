@@ -4,5 +4,4 @@
 # insmod them on resume.
 # Originally created by ChimeraOS
 
-modprobe -r bmi260_i2c
-modprobe -r bmi260_core
+modprobe -r mt7921e

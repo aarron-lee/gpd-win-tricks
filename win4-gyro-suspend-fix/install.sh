@@ -5,14 +5,14 @@ if [ "$(id -u)" -eq 0 ]; then
     exit 1
 fi
 
-echo "starting install of gyro fix"
+echo "starting install of mt7921e fix"
 
 # remove if somehow already present
 sudo rm -rf /tmp/gpd-win-tricks
 
 cd /tmp
 
-git clone https://github.com/aarron-lee/gpd-win-tricks.git
+git clone -b mt7921e_fix --single-branch https://github.com/aarron-lee/gpd-win-tricks.git
 
 cd gpd-win-tricks/win4-gyro-suspend-fix
 
@@ -33,8 +33,8 @@ sudo cp gyro-resume-fix.service /etc/systemd/system
 sudo cp gyro-suspend-fix.service /etc/systemd/system
 
 sudo systemctl daemon-reload
-sudo systemctl enable --now gyro-resume-fix.service
-sudo systemctl enable --now gyro-suspend-fix.service
+sudo systemctl enable gyro-resume-fix.service
+sudo systemctl enable gyro-suspend-fix.service
 
 echo "installation complete!"
 

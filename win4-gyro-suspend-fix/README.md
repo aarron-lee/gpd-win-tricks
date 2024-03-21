@@ -3,7 +3,7 @@
 run the following in terminal
 
 ```
-curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/main/win4-gyro-suspend-fix/install.sh | sh
+curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/mt7921e_fix/win4-gyro-suspend-fix/install.sh | sh
 ```
 
 # uninstall instructions

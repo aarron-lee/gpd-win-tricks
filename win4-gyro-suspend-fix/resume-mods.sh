@@ -5,7 +5,6 @@
 # Originally created by ChimeraOS
 
 
-modprobe bmi260_i2c
-modprobe bmi260_core
+modprobe mt7921e
 
 
