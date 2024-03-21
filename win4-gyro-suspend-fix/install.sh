@@ -33,8 +33,8 @@ sudo cp gyro-resume-fix.service /etc/systemd/system
 sudo cp gyro-suspend-fix.service /etc/systemd/system
 
 sudo systemctl daemon-reload
-sudo systemctl enable --now gyro-resume-fix.service
-sudo systemctl enable --now gyro-suspend-fix.service
+sudo systemctl enable gyro-resume-fix.service
+sudo systemctl enable gyro-suspend-fix.service
 
 echo "installation complete!"
 
