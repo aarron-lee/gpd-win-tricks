@@ -17,3 +17,9 @@ git commit of original patch: https://github.com/ublue-os/bazzite/commit/0492920
 ### Fix flaky suspend
 
 run [wm2-suspend-udev.sh](./wm2-suspend-udev.sh)
+
+# 3d prints
+
+https://www.reddit.com/r/gpdwin/comments/14c5cvp/i_made_a_set_of_win_4_front_covers/
+
+https://sketchfab.com/3d-models/gpd-win-4-grips-6c8c02d6dac047c6b0214a1e4384a096
