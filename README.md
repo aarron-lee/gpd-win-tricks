@@ -32,6 +32,10 @@ As documented in HHD's docs [here](https://github.com/hhd-dev/hhd?tab=readme-ov-
 
 use the `GPD-WinControl` decky plugin ([here](https://github.com/honjow/GPD-WinControl)), and set L4 to SYSRQ and R4 to PAUSE
 
+### Fan Control
+
+use PowerControl or PowerControl-Fork decky plugins
+
 ## GPD Win Max 2 (6800u)
 
 ### Help Fix flaky suspend
