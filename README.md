@@ -16,6 +16,10 @@ TDP Control:
 - SimpleDeckyTDP - https://github.com/aarron-lee/SimpleDeckyTDP/
   - use with PowerControl Fork - https://github.com/aarron-lee/PowerControl
 
+RGB-only controls for 6800u Win 4:
+
+- GPD Control https://github.com/aarron-lee/GpdControl/
+
 # Videos
 
 Dual Boot Setup Videos:
