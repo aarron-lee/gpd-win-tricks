@@ -26,6 +26,12 @@ run the [install script](./win4-gyro-suspend-fix/install.sh) for to setup system
 
 source of original patch, which has been removed from Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
 
+### HHD back buttons
+
+As documented in HHD's docs [here](https://github.com/hhd-dev/hhd?tab=readme-ov-file#extra-steps-gpd-win-devices), you need to remap the back buttons via GPD Control for them to work in steam input.
+
+use the `GPD-WinControl` decky plugin ([here](https://github.com/honjow/GPD-WinControl)), and set L4 to SYSRQ and R4 to PAUSE
+
 ## GPD Win Max 2 (6800u)
 
 ### Help Fix flaky suspend
