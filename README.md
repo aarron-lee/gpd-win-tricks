@@ -1,6 +1,20 @@
 # gpd-win-tricks
 
-Info on running linux on GPD Win devices. Note these are my own personal notes for documentation
+Info on running linux on GPD Win devices.
+
+# Resources
+
+HHD Decky Plugin - https://github.com/hhd-dev/hhd-decky
+
+RGB Control + Button Remapping
+
+- GPD-WinControl https://github.com/honjow/GPD-WinControl
+
+TDP Control:
+
+- PowerControl - https://github.com/mengmeet/PowerControl
+- SimpleDeckyTDP - https://github.com/aarron-lee/SimpleDeckyTDP/
+  - use with PowerControl Fork - https://github.com/aarron-lee/PowerControl
 
 # GPD Win 4 (6800u)
 
@@ -10,11 +24,11 @@ Info on running linux on GPD Win devices. Note these are my own personal notes f
 
 run the [install script](./win4-gyro-suspend-fix/install.sh) for to setup systemd services
 
-git commit of original patch: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
+source of original patch, which has been removed from Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
 
 ## GPD Win Max 2 (6800u)
 
-### Fix flaky suspend
+### Help Fix flaky suspend
 
 run [wm2-suspend-udev.sh](./wm2-suspend-udev.sh)
 
