@@ -16,6 +16,15 @@ TDP Control:
 - SimpleDeckyTDP - https://github.com/aarron-lee/SimpleDeckyTDP/
   - use with PowerControl Fork - https://github.com/aarron-lee/PowerControl
 
+# Videos
+
+Dual Boot Setup Videos:
+
+- https://www.youtube.com/watch?v=45P3hlvq8jk
+- https://www.youtube.com/watch?v=RUES5B5j6EU
+
+Win 4 setup video: https://www.youtube.com/watch?v=lnNfMY9kzjk
+
 # GPD Win 4 (6800u)
 
 ## Bazzite OS
