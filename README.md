@@ -22,7 +22,7 @@ TDP Control:
 
 ### Fix gyro + hhd after suspend-resume cycles
 
-run the [install script](./win4-gyro-suspend-fix/install.sh) for to setup systemd services
+run the [install script](./win4-gyro-suspend-fix/README.md) for to setup systemd services
 
 source of original patch, which has been removed from Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
 
