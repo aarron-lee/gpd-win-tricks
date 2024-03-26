@@ -14,7 +14,7 @@ TDP Control:
 
 - PowerControl - https://github.com/mengmeet/PowerControl
 - SimpleDeckyTDP - https://github.com/aarron-lee/SimpleDeckyTDP/
-  - use with PowerControl Fork - https://github.com/aarron-lee/PowerControl
+  - use with PowerControl Fork for fan controls - https://github.com/aarron-lee/PowerControl
 
 RGB-only controls for 6800u Win 4:
 
@@ -22,14 +22,14 @@ RGB-only controls for 6800u Win 4:
 
 # Videos
 
+Win 4 setup Guide: https://www.youtube.com/watch?v=lnNfMY9kzjk
+
 Dual Boot Setup Videos:
 
 - https://www.youtube.com/watch?v=45P3hlvq8jk
 - https://www.youtube.com/watch?v=RUES5B5j6EU
 
-Win 4 setup video: https://www.youtube.com/watch?v=lnNfMY9kzjk
-
-# GPD Win 4 (6800u)
+# GPD Win 4
 
 ## Bazzite OS
 
