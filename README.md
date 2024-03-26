@@ -33,6 +33,15 @@ Dual Boot Setup Videos:
 
 ## Bazzite OS
 
+### Recommended settings to change in game mode
+
+Under display settings in game mode, change the settings for the following:
+
+- `Use Native Color Temperature` - Enabled
+- `Enable Unified Frame Limit Management` - Disabled
+
+You'll need the separated FPS limiter for FPS limits
+
 ### Fix gyro + hhd after suspend-resume cycles
 
 run the [install script](./win4-gyro-suspend-fix/README.md) for to setup systemd services
