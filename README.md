@@ -20,6 +20,8 @@ RGB-only controls for 6800u Win 4:
 
 - GPD Control https://github.com/aarron-lee/GpdControl/
 
+More Win 4 resources: https://github.com/lertsoft/GPD_WIN4/releases
+
 # Videos
 
 Win 4 setup Guide: https://www.youtube.com/watch?v=lnNfMY9kzjk
