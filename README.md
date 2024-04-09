@@ -2,6 +2,42 @@
 
 Info on running linux on GPD Win devices.
 
+# Current Status of Linux on GPD Devices
+
+Note that Linux is fairly usable as a daily driver, but depending on the device you may encounter some issues.
+
+Also note that these devices might have issues with HDMI 2.1 on Linux.
+
+# What works?
+
+## GPD Win 4 (6800u and 7840u)
+
+All hardware, excluding the FP sensor, is usable with Linux. Note that this has only been confirmed on the 6800u and 7840u versions.
+
+This includes the following:
+
+- full controller + back buttons + gyro support in Steam input via Dualsense Edge emulation (currently requires installing Handheld Daemon)
+  - optical mouse nub cannot be used in steam input because it's hardware implementation makes it impossible to treat as a trackpad
+  - gyro support requires an extra fix, detailed [here](./win4-gyro-suspend-fix/README.md)
+- TDP control can be done via either Decky Plugins or HHD
+- RGB control works via Decky Plugins or HHD
+- suspend-resume works
+- GPD's mouse/desktop mode works
+- all standard hardware works, including wifi, bluetooth, the USB port, sound, volume buttons, the physical keyboard and mouse nub, etc
+  - note, for some of this hardware to work, you must be on the latest bios for the 6800u Win 4
+  - oculink hasn't been confirmed to work with eGPUs, but it should work with AMD eGPUs
+- fan control is possible via Decky Plugin
+
+## GPD Win Max 2 (6800u)
+
+The WM2 is mostly usable with Linux, but does have some bugs
+
+- standard stuff like controller hardware, wifi, bluetooth, sound, etc, all work fine
+- the gyro is buggy, requires dev work to be usable
+- suspend can occasionally take a long time to fully wake up the device
+  - suspend fixes in this repo doen't completely solve the suspend issues
+- Fan control is possible via Decky Plugin
+
 # Resources
 
 HHD Decky Plugin - https://github.com/hhd-dev/hhd-decky
