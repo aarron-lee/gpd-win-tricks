@@ -18,7 +18,7 @@ This includes the following:
 
 - full controller + back buttons + gyro support in Steam input via Dualsense Edge emulation (currently requires installing Handheld Daemon)
   - optical mouse nub cannot be used in steam input because it's hardware implementation makes it impossible to treat as a trackpad
-  - gyro support requires an extra fix, detailed [here](./win4-gyro-suspend-fix/README.md)
+  - gyro support requires an extra fix, details [here](./win4-gyro-suspend-fix/README.md)
 - TDP control can be done via either Decky Plugins or HHD
 - RGB control works via Decky Plugins or HHD
 - suspend-resume works
@@ -84,7 +84,7 @@ You'll need the separated FPS limiter for FPS limits
 
 run the [install script](./win4-gyro-suspend-fix/README.md) for to setup systemd services
 
-source of original patch, which has been removed from Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
+based on this patch that had previously shipped with Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
 
 ### HHD back buttons
 
@@ -122,7 +122,3 @@ as a solution, you can create the partitions in Windows, then have the bazzite i
 https://www.reddit.com/r/gpdwin/comments/14c5cvp/i_made_a_set_of_win_4_front_covers/
 
 https://sketchfab.com/3d-models/gpd-win-4-grips-6c8c02d6dac047c6b0214a1e4384a096
-
-```
-
-```
