@@ -102,7 +102,9 @@ use PowerControl or PowerControl-Fork decky plugins
 
 run [wm2-suspend-udev.sh](./wm2-suspend-udev.sh)
 
-Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win Max 2 + any other distros with the gyro driver installed
+Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win Max 2 + any other distros with the gyro driver installed. Note that this might not fully fix suspend.
+
+Confirmed on both the 6800u and 7840u WM2 models
 
 # Mini-guides
 
