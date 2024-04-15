@@ -38,6 +38,10 @@ The WM2 is mostly usable with Linux, but does have some bugs
   - suspend fixes in this repo doen't completely solve the suspend issues
 - Fan control is possible via Decky Plugin
 
+## GPD Win Mini
+
+Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including the extra gyro fix. Still needs additional confirmation from more users
+
 # Resources
 
 HHD Decky Plugin - https://github.com/hhd-dev/hhd-decky
@@ -82,7 +86,9 @@ You'll need the separated FPS limiter for FPS limits
 
 ### Fix gyro + hhd after suspend-resume cycles
 
-read [here](./win4-gyro-suspend-fix/README.md) for instructions to setup fix
+read [here](./win4-gyro-suspend-fix/README.md) for instructions to setup fix.
+
+Applies to the Win 4 6800u, 7840u, 8840u, and apparently also works on the Win Mini (confirmation required for Win Mini)
 
 based on this patch that had previously shipped with Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
 
