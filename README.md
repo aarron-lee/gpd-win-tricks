@@ -82,7 +82,7 @@ You'll need the separated FPS limiter for FPS limits
 
 ### Fix gyro + hhd after suspend-resume cycles
 
-run the [install script](./win4-gyro-suspend-fix/README.md) for to setup systemd services
+read [here](./win4-gyro-suspend-fix/README.md) for instructions to setup fix
 
 based on this patch that had previously shipped with Bazzite: https://github.com/ublue-os/bazzite/commit/04929200614a16c16d22854924a42f42561049d8
 
