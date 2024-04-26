@@ -2,6 +2,14 @@
 
 Info on running linux on GPD Win devices.
 
+- [Current Status of Linux on GPD devices](#current-status-of-linux-on-gpd-devices)
+- [What Works?](#what-works)
+- [Known Bugs](#known-bugs)
+- [Resources](#resources)
+- [Tutorial Videos](#tutorial-videos)
+- [Mini Guides](#mini-guides)
+- [3D prints](#3d-prints)
+
 # Current Status of Linux on GPD Devices
 
 Note that Linux is fairly usable as a daily driver, but depending on the device you may encounter some issues.
@@ -42,6 +50,16 @@ The WM2 is mostly usable with Linux, but does have some bugs
 
 Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including the extra gyro fix. Still needs additional confirmation from more users
 
+# Known bugs
+
+## GPD Win 4
+
+- Volume buttons require v3.06 or newer bios on the 6800u win 4
+- (Bazzite OS 2024-04-26) Bazzite 3.0 update broke gyro on the win 4, fix is currently being investigated + should be released soon
+  - meanwhile, you can temporarily rollback via running `bazzite-rollback-helper rebase 39-stable-20240407`
+  - once the fix is released, you can go back to stable via `rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bazzite-deck:stable`
+    - `bazzite-rollback-helper` was only recently added, so it won't be available on older images
+
 # Resources
 
 HHD Decky Plugin - https://github.com/hhd-dev/hhd-decky
@@ -64,7 +82,7 @@ RGB-only controls for 6800u Win 4:
 
 More Win 4 resources: https://github.com/lertsoft/GPD_WIN4/releases
 
-# Videos
+# Tutorial Videos
 
 Win 4 setup Guide: https://www.youtube.com/watch?v=lnNfMY9kzjk
 
