@@ -56,8 +56,7 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 ## GPD Win 4
 
 - Volume buttons require v3.06 or newer bios on the 6800u win 4
-- (Bazzite OS 2024-04-26) Bazzite 3.0 update broke gyro on the win 4, it is now fixed on the latest bazzite
-  - you can go back to stable via `rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bazzite-deck:stable`
+- Gyro requires fix on Bazzite, see [here](./win4-gyro-suspend-fix/README.md)
 
 # Resources
 
