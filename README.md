@@ -53,6 +53,11 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 
 # Known bugs
 
+- (2024-5-13) Bazzite - There are reports of refresh rate and FPS limiters not working, this is likely due to a new gamescope update on Bazzite
+  - workaround: rollback to the last version of bazzite with old gamescope, the 2024-04-27 image
+    - run in terminal for rollback: `bazzite-rollback-helper rebase 40-20240427`
+  - for to go back to normal updates later, run: `bazzite-rollback-helper rebase stable`
+
 ## GPD Win 4
 
 - Volume buttons require v3.06 or newer bios on the 6800u win 4
