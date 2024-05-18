@@ -53,9 +53,10 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 
 # Known bugs
 
-- (2024-5-13) Bazzite - There are reports of refresh rate and FPS limiters not working, this is likely due to a new gamescope update on Bazzite
+- (2024-5-13) Bazzite - There are reports of refresh rate and FPS limiters not working, as well as black screen on boot. this is likely due to a new gamescope update on Bazzite
   - workaround: rollback to the last version of bazzite with old gamescope, the 2024-04-27 image
     - run in terminal for rollback: `bazzite-rollback-helper rebase 40-20240427`
+  - if you can't boot for to rollback, press esc during boot to bring up the grub menu. use the grub menu to boot your previous BazziteOS install. And from there, do the rebase command
   - for to go back to normal updates later, run: `bazzite-rollback-helper rebase stable`
 
 ## GPD Win 4
