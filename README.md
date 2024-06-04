@@ -37,6 +37,10 @@ This includes the following:
 - fan control is possible via Decky Plugin
 - while there technically is a fingerprint reader driver, it is outdated and doesn't work on newer versions of Linux. see [here](https://github.com/mrrbrilliant/ft9201-static) for the outdated driver
 
+## GPD Win 4 (8840u)
+
+Mostly the same as the 6800u/7840u version, but there's some reports that suspend-resume might have broken in a recent update.
+
 ## GPD Win Max 2 (6800u)
 
 The WM2 is mostly usable with Linux, but does have some bugs
