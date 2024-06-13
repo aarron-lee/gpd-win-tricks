@@ -140,6 +140,14 @@ Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win M
 
 Confirmed on both the 6800u and 7840u WM2 models
 
+The fingerprint scanner also has been found to cause suspend issues. Since the fingerprint scanner is non-functional on Linux, we can disable it with a udev rule
+
+<!-- SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{authorized}="0" -->
+
+```
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
+```
+
 # Mini-guides
 
 ### failure to partition for dual boot
