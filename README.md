@@ -142,6 +142,11 @@ The fingerprint scanner has been found to cause suspend issues. Since the finger
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
 ```
 
+<!--
+win 4 fp sensor
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2808", ATTR{idProduct}=="9338", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules 
+-->
+
 other changes that may help:
 
 run [wm2-suspend-udev.sh](./wm2-suspend-udev.sh)
