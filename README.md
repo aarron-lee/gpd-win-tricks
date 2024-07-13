@@ -112,6 +112,16 @@ Under display settings in game mode, change the settings for the following:
 
 You'll need the separated FPS limiter for FPS limits
 
+### Disable FP Sensor (6800u, untested on newer win 4 models)
+
+Since the GPD Win 4 Fingerprint Sensor doesn't work on Linux, we can disable it to make sure it doesn't interfere with suspend, etc.
+
+Run the following in terminal, then reboot the device.
+
+```
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2808", ATTR{idProduct}=="9338", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
+```
+
 ### Fix gyro + hhd after suspend-resume cycles
 
 read [here](./win4-gyro-suspend-fix/README.md) for instructions to setup fix.
@@ -141,11 +151,6 @@ The fingerprint scanner has been found to cause suspend issues. Since the finger
 ```
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
 ```
-
-<!--
-win 4 fp sensor
-echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2808", ATTR{idProduct}=="9338", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules 
--->
 
 other changes that may help:
 
