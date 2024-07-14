@@ -36,10 +36,11 @@ This includes the following:
   - oculink hasn't been confirmed to work with eGPUs, but it should work with AMD eGPUs
 - fan control is possible via Decky Plugin
 - while there technically is a fingerprint reader driver, it is outdated and doesn't work on newer versions of Linux. see [here](https://github.com/mrrbrilliant/ft9201-static) for the outdated driver
+  - consider [fully disabling the fp sensor](#disable-fp-sensor-6800u-untested-on-newer-win-4-models) so that it doesn't cause issues
 
 ## GPD Win 4 (8840u)
 
-Mostly the same as the 6800u/7840u version, but there's some reports that suspend-resume might have broken in a recent update.
+Reportedly mostly the same as the 6800u/7840u version
 
 ## GPD Win Max 2 (6800u)
 
@@ -47,8 +48,8 @@ The WM2 is mostly usable with Linux, but does have some bugs
 
 - standard stuff like controller hardware, wifi, bluetooth, sound, etc, all work fine
 - the gyro is buggy, requires dev work to be usable
-- suspend can occasionally take a long time to fully wake up the device
-  - suspend fixes in this repo doen't completely solve the suspend issues
+- suspend on the 6800u model can be fully fixed via fixes descibed in this repo
+  - newer WM2 variants (7840u, etc) seem to have other bugs related to suspend
 - Fan control is possible via Decky Plugin
 
 ## GPD Win Mini
@@ -81,12 +82,7 @@ TDP Control:
 - PowerControl - https://github.com/mengmeet/PowerControl
 - SimpleDeckyTDP - https://github.com/aarron-lee/SimpleDeckyTDP/
   - use with PowerControl Fork for fan controls - https://github.com/aarron-lee/PowerControl
-
-RGB-only controls for 6800u Win 4:
-
-- GPD Control https://github.com/aarron-lee/GpdControl/
-
-(Untested) RGB controls plugin: https://github.com/honjow/HueSync
+- RGB controls plugin: https://github.com/honjow/HueSync
 
 More Win 4 resources: https://github.com/lertsoft/GPD_WIN4/releases
 
