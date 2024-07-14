@@ -36,6 +36,7 @@ This includes the following:
   - oculink hasn't been confirmed to work with eGPUs, but it should work with AMD eGPUs
 - fan control is possible via Decky Plugin
 - while there technically is a fingerprint reader driver, it is outdated and doesn't work on newer versions of Linux. see [here](https://github.com/mrrbrilliant/ft9201-static) for the outdated driver
+  - another available driver [here](https://github.com/banianitc/ft9201-fingerprint-driver)
   - consider [fully disabling the fp sensor](#disable-fp-sensor-6800u-untested-on-newer-win-4-models) so that it doesn't cause issues
 
 ## GPD Win 4 (8840u)
