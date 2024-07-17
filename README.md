@@ -59,7 +59,8 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 
 # Known bugs
 
-Nothing at the moment
+- gyro is borked on WM2
+- gyro on Win 4 requires a workaround
 
 ## GPD Win 4
 
