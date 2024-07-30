@@ -29,15 +29,17 @@ This includes the following:
   - gyro support requires an extra fix, details [here](./win4-gyro-suspend-fix/README.md)
 - TDP control can be done via either Decky Plugins or HHD
 - RGB control works via Decky Plugins or HHD
+  - there is also an untested RGB driver here - https://github.com/bm16ton/gpd-win4-rgb
 - suspend-resume works
+  - consider [fully disabling the fp sensor](#disable-fp-sensor-6800u-untested-on-newer-win-4-models) so that it doesn't cause suspend-resume issues
 - GPD's mouse/desktop mode works
 - all standard hardware works, including wifi, bluetooth, the USB port, sound, volume buttons, the physical keyboard and mouse nub, etc
   - note, for some of this hardware to work, you must be on the latest bios for the 6800u Win 4
   - oculink hasn't been confirmed to work with eGPUs, but it should work with AMD eGPUs
 - fan control is possible via Decky Plugin
-- while there technically is a fingerprint reader driver, it is outdated and doesn't work on newer versions of Linux. see [here](https://github.com/mrrbrilliant/ft9201-static) for the outdated driver
+- while unconfirmed, there is a fingerprint reader driver for the win 4 here: https://github.com/bm16ton/ft92010x9338
+  - there is also an outdated proprietary driver [here](https://github.com/mrrbrilliant/ft9201-static)
   - another available driver [here](https://github.com/banianitc/ft9201-fingerprint-driver)
-  - consider [fully disabling the fp sensor](#disable-fp-sensor-6800u-untested-on-newer-win-4-models) so that it doesn't cause issues
 
 ## GPD Win 4 (8840u)
 
@@ -61,6 +63,8 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 
 - gyro is borked on WM2
 - gyro on Win 4 requires a workaround
+- fingerprint scanners can cause flaky suspend
+  - workaround: fully disable the fingerprint scanners (instructions listed further below for both the WM2 and Win 4)
 
 ## GPD Win 4
 
