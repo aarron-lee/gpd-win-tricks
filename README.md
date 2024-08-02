@@ -65,6 +65,13 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 - gyro on Win 4 requires a workaround
 - fingerprint scanners can cause flaky suspend
   - workaround: fully disable the fingerprint scanners (instructions listed further below for both the WM2 and Win 4)
+- If using Decky loader, shutdown can take an unusually long time
+  - this is because Decky sets an unusually long timeout time (45s)
+  - workaround: shorten the timeout time:
+```
+sudo sed -i 's~TimeoutStopSec=.*$~TimeoutStopSec=2~g' /etc/systemd/system/plugin_loader.service
+sudo systemctl daemon-reload
+```
 
 ## GPD Win 4
 
