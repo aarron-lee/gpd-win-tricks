@@ -52,7 +52,7 @@ The WM2 is mostly usable with Linux, but does have some bugs
 - standard stuff like controller hardware, wifi, bluetooth, sound, etc, all work fine
 - the gyro is buggy, requires dev work to be usable
 - suspend on the 6800u model can be fully fixed via fixes descibed in this repo
-  - newer WM2 variants (7840u, etc) seem to have other bugs related to suspend
+  - newer WM2 variants (7840u, etc) have bugs with suspend, see [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154) for details
 - Fan control is possible via Decky Plugin
 
 ## GPD Win Mini
