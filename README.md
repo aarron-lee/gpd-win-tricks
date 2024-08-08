@@ -63,6 +63,8 @@ Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including
 
 - gyro is borked on WM2
 - gyro on Win 4 requires a workaround
+- focus issue after resume from suspend, where the game controller seems to be stuck in Steam UI and not getting picked up by the game
+  - solution: disable custom wake movies, see github issues [here](https://github.com/ublue-os/bazzite/issues/1474) and [here](https://github.com/ValveSoftware/SteamOS/issues/1424) for more details
 - fingerprint scanners can cause flaky suspend
   - workaround: fully disable the fingerprint scanners (instructions listed further below for both the WM2 and Win 4)
 - If using Decky loader, shutdown can take an unusually long time
