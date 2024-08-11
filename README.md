@@ -98,6 +98,10 @@ TDP Control:
 
 More Win 4 resources: https://github.com/lertsoft/GPD_WIN4/releases
 
+Controller-friendly Youtube app (with steam input community profile) - https://github.com/Haroon01/youtube-tv-client
+
+Controller-friendly Crunchyroll app (with steam input community profile) - https://github.com/aarron-lee/crunchyroll-linux
+
 # Tutorial Videos
 
 Win 4 setup Guide: https://www.youtube.com/watch?v=lnNfMY9kzjk
