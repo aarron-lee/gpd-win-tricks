@@ -18,7 +18,7 @@ Also note that these devices might have issues with HDMI 2.1 on Linux.
 
 # What works?
 
-## GPD Win 4 (6800u and 7840u)
+## GPD Win 4 (6800u, 7840u, 8840u)
 
 All hardware, excluding the FP sensor, is usable with Linux. Note that this has only been confirmed on the 6800u and 7840u versions.
 
@@ -28,10 +28,10 @@ This includes the following:
   - optical mouse nub cannot be used in steam input because it's hardware implementation makes it impossible to treat as a trackpad
   - gyro support requires an extra fix, details [here](./win4-gyro-suspend-fix/README.md)
 - TDP control can be done via either Decky Plugins or HHD
-- RGB control works via Decky Plugins or HHD
+- RGB control works via Decky Plugins
   - there is also an untested RGB driver here - https://github.com/bm16ton/gpd-win4-rgb
 - suspend-resume works
-  - consider [fully disabling the fp sensor](#disable-fp-sensor-6800u-untested-on-newer-win-4-models) so that it doesn't cause suspend-resume issues
+  - make sure you [fully disable the fp sensor](#disable-fp-sensor-6800u-untested-on-newer-win-4-models) so that it doesn't cause suspend-resume issues
 - GPD's mouse/desktop mode works
 - all standard hardware works, including wifi, bluetooth, the USB port, sound, volume buttons, the physical keyboard and mouse nub, etc
   - note, for some of this hardware to work, you must be on the latest bios for the 6800u Win 4
@@ -41,11 +41,15 @@ This includes the following:
   - there is also an outdated proprietary driver [here](https://github.com/mrrbrilliant/ft9201-static)
   - another available driver [here](https://github.com/banianitc/ft9201-fingerprint-driver)
 
-## GPD Win 4 (8840u)
+## GPD Win Mini
 
-Reportedly mostly the same as the 6800u/7840u version
+Most of the GPD Win 4 info applies to the Win Mini, including the extra gyro fix. The Win Mini has no FP sensor, so that does not apply.
 
-## GPD Win Max 2 (6800u)
+Users have confirmed that suspend-resume works fine for all models, all general hardware (controller, bluetooth, wifi, etc) works fine, etc. There's no major reported issues.
+
+The only issue that you may encounter is the screen being the wrong orientation in gamescope-session/game mode. This is due to the portrait screen on the 7840u model, vs the native landscape screen on the 8840u model. This issue is easy to workaround by changing the relevant kernel arg for orientation.
+
+## GPD Win Max 2
 
 The WM2 is mostly usable with Linux, but does have some bugs
 
@@ -55,10 +59,6 @@ The WM2 is mostly usable with Linux, but does have some bugs
 - suspend on the 6800u model can be fully fixed via fixes descibed in this repo
   - newer WM2 variants (7840u, etc) have bugs with suspend, see [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154) for details
 - Fan control is possible via Decky Plugin
-
-## GPD Win Mini
-
-Not confirmed, but most of the GPD Win 4 info applies to the Win mini, including the extra gyro fix. Still needs additional confirmation from more users
 
 # Known bugs
 
@@ -121,9 +121,11 @@ Under display settings in game mode, change the settings for the following:
 
 - `Use Native Color Temperature` - Enabled
 
-### Disable FP Sensor (6800u, untested on newer win 4 models)
+### Disable FP Sensor on Win 4 to fix suspend-resume
 
 Since the GPD Win 4 Fingerprint Sensor doesn't work on Linux, we can disable it to make sure it doesn't interfere with suspend, etc.
+
+Note that this fix should already be shipping on the latest Bazzite.
 
 Run the following in terminal, then reboot the device.
 
@@ -151,9 +153,11 @@ use PowerControl or PowerControl-Fork decky plugins
 
 ## GPD Win Max 2 (6800u)
 
-### Help Fix flaky suspend
+### Disable FP sensor on WM2 to fix suspend-resume
 
 The fingerprint scanner has been found to cause suspend issues. Since the fingerprint scanner is non-functional on Linux, we can disable it with a udev rule
+
+Note that this fix should already be shipping on the latest Bazzite.
 
 <!-- SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{authorized}="0" -->
 
@@ -161,11 +165,15 @@ The fingerprint scanner has been found to cause suspend issues. Since the finger
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
 ```
 
+<!-->
+### Help Fix flaky suspend
+
 other changes that may help:
 
 run [wm2-suspend-udev.sh](./wm2-suspend-udev.sh)
 
 Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win Max 2 + any other distros with the gyro driver installed. Note that this might not fully fix suspend.
+-->
 
 # Mini-guides
 
