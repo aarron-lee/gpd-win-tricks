@@ -8,6 +8,8 @@ Info on running linux on GPD Win devices.
 - [Resources](#resources)
 - [Tutorial Videos](#tutorial-videos)
 - [Mini Guides](#mini-guides)
+  - [How to change display scaling on internal display](#how-to-change-display-scaling-on-internal-display)
+  - [How do gamescope scaling options work?](#how-to-use-steams-scaling-features-such-as-int-scaling-fsr-etc)
 - [3D prints](#3d-prints)
 
 # Current Status of Linux on GPD Devices
@@ -71,6 +73,7 @@ The WM2 is mostly usable with Linux, but does have some bugs
 - If using Decky loader, shutdown can take an unusually long time
   - this is because Decky sets an unusually long timeout time (45s)
   - workaround: shorten the timeout time:
+
 ```
 sudo sed -i 's~TimeoutStopSec=.*$~TimeoutStopSec=2~g' /etc/systemd/system/plugin_loader.service
 sudo systemctl daemon-reload
@@ -166,6 +169,7 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{re
 ```
 
 <!-->
+
 ### Help Fix flaky suspend
 
 other changes that may help:
@@ -176,6 +180,35 @@ Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win M
 -->
 
 # Mini-guides
+
+### How to change display scaling on internal display
+
+source: https://www.reddit.com/r/SteamDeck/comments/17qhmpg/comment/k8dgjnq/
+
+Follow the below steps to enable UI scaling for the internal display:
+
+1. Install Decky Plugin loader if you haven't already.
+2. Go into Decky Loaders settings and under General enable "Developer mode".
+3. A new section appears on the left hand side named "Developer", go in there and enable "Enable Valve Internal".
+4. Go into Steam Deck settings and under System enable "Enable Developer Mode".
+5. Scroll all the way down in the left hand list and a new section named "Valve Internal" have appeared, go in there. BE CAREFUL HERE, THESE SETTINGS ARE POTENTIALLY DANGEROUS!
+6. Scroll down a bit until you see "Show display scaling settings for Internal Display" and enable it. MAKE SURE TO NOT TOUCH ANYTHING ELSE UNLESS YOU KNOW WHAT YOU'RE DOING.
+7. The new display scaling options will now be available under Display.
+8. Disable developer mode under System.
+9. In Decky Loaders settings, disable "Enable Valve Internal" in the Developer section.
+10. Still in Decky Loader, disable developer mode under General.
+
+The display scaling options will still be available in the display settings after disabling developer mode. Enjoy!
+
+### How to use steam's scaling features, such as int scaling, FSR, etc
+
+![steam resolutions guide](https://github.com/aarron-lee/legion-go-tricks/blob/main/steam-resolutions-overview.png)
+
+Full guide here: https://medium.com/@mohammedwasib/a-guide-to-a-good-docked-gaming-experience-on-the-steam-deck-346e393b657a
+
+Reddit discussion [here](https://www.reddit.com/r/SteamDeck/comments/z90ca0/a_guide_to_a_good_docked_gaming_experience_on_the/)
+
+PDF Mirror of guide [here](https://github.com/aarron-lee/legion-go-tricks/blob/main/steam-resolutions-guide.pdf)
 
 ### failure to partition for dual boot
 
