@@ -20,7 +20,7 @@ Also note that these devices might have issues with HDMI 2.1 on Linux.
 
 # What works?
 
-## GPD Win 4 (6800u, 7840u, 8840u)
+## GPD Win 4 (6800u)
 
 All hardware, excluding the FP sensor, is usable with Linux. Note that this has only been confirmed on the 6800u and 7840u versions.
 
@@ -42,6 +42,12 @@ This includes the following:
 - while unconfirmed, there is a fingerprint reader driver for the win 4 here: https://github.com/bm16ton/ft92010x9338
   - there is also an outdated proprietary driver [here](https://github.com/mrrbrilliant/ft9201-static)
   - another available driver [here](https://github.com/banianitc/ft9201-fingerprint-driver)
+
+### GPD Win 4 (7840u, 8840u)
+
+Everything for the 6800u version applies, but there's been some recent reports of a potential suspend issue where it wakes up after some time in suspend.
+
+These are recent reports, so it's unknown on if it's due to a recent bios update, or if the issue has always been present. It strongly resembles the issue affecting the WM2 7840u/8840u, detailed bug report for the WM2 can be found [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154)
 
 ## GPD Win Mini
 
