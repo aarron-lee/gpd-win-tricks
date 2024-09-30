@@ -14,7 +14,7 @@ cd /tmp
 
 git clone -b mt7921e_fix --single-branch https://github.com/aarron-lee/gpd-win-tricks.git
 
-cd gpd-win-tricks/win4-gyro-suspend-fix
+cd gpd-win-tricks/suspend-fix
 
 sudo cp ./suspend-mods.sh /usr/local/bin/suspend-mods
 sudo cp ./resume-mods.sh /usr/local/bin/resume-mods

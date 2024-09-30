@@ -5,7 +5,7 @@ This workaround has been modified to load and unload the mt7921e wifi driver on 
 run the following in terminal
 
 ```
-curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/mt7921e_fix/win4-gyro-suspend-fix/install.sh | sh
+curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/mt7921e_fix/suspend-fix/install.sh | sh
 ```
 
 # uninstall instructions
