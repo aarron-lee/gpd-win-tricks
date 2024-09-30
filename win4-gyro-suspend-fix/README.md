@@ -1,3 +1,5 @@
+This workaround has been modified to load and unload the mt7921e wifi driver on suspend-resume cycles, meant as a workaround for specific Ayaneo devices.
+
 # Install instructions
 
 run the following in terminal
