@@ -9,12 +9,12 @@ curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/mt7921e_fix/
 # uninstall instructions
 
 ```
-sudo systemctl disable --now gyro-resume-fix.service
-sudo systemctl disable --now gyro-suspend-fix.service
+sudo systemctl disable --now resume-fix.service
+sudo systemctl disable --now suspend-fix.service
 
 sudo rm /usr/local/bin/suspend-mods
 sudo rm /usr/local/bin/resume-mods
 
-sudo rm /etc/systemd/system/gyro-resume-fix.service
-sudo rm /etc/systemd/system/gyro-suspend-fix.service
+sudo rm /etc/systemd/system/resume-fix.service
+sudo rm /etc/systemd/system/suspend-fix.service
 ```

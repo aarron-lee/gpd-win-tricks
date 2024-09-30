@@ -1,5 +1,5 @@
 [Unit]
-Description=On Sleep disable gyro
+Description=On Sleep disable
 Before=suspend.target
 
 [Service]
@@ -8,4 +8,3 @@ User=root
 
 [Install]
 WantedBy=suspend.target
-
