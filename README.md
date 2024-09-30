@@ -185,6 +185,20 @@ run [wm2-suspend-udev.sh](./wm2-suspend-udev.sh)
 Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win Max 2 + any other distros with the gyro driver installed. Note that this might not fully fix suspend.
 -->
 
+## GPD win mini
+
+### Sound EQ
+
+place the `sink-eq6.conf` file in `~/.config/pipewire/filter-chain.conf.d/` directory
+
+this will add a new `GPD Win Mini EQ` device to your sound options.
+
+**WARNING: You MUST max the volume of your regular sound option before switching to the `GPD Win Mini EQ` option. The sound level of the regular option affects the max of the EQ option.
+
+It should be selected by default in game mode because of priority.driver / priority.session, but you can comment those out if you want to select it manually.
+
+Thanks to @justinweiss on Discord for this fix
+
 # Mini-guides
 
 ### How to change display scaling on internal display
