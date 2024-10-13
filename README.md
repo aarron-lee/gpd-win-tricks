@@ -66,6 +66,7 @@ The WM2 is mostly usable with Linux, but does have some bugs
 - the gyro is buggy/broken, requires dev work to be usable
 - suspend on the 6800u model can be fully fixed via fixes descibed in this repo
   - newer WM2 variants (7840u, etc) have bugs with suspend, see [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154) for details
+  - there is an experimental workaround that helps with suspend, see [here](#workaround-for-random-wakes-from-suspend-experimental)
 - Fan control is possible via Decky Plugin
 
 # Known bugs
@@ -174,6 +175,10 @@ Note that this fix should already be shipping on the latest Bazzite.
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
 ```
 
+### Workaround for random wakes from suspend (Experimental)
+
+See Experimental workaround, found [here](./wm2-wakeup-workaround/)
+
 <!-->
 
 ### Help Fix flaky suspend
@@ -193,7 +198,7 @@ place the `sink-eq6.conf` file in `~/.config/pipewire/filter-chain.conf.d/` dire
 
 this will add a new `GPD Win Mini EQ` device to your sound options.
 
-**WARNING: You MUST max the volume of your regular sound option before switching to the `GPD Win Mini EQ` option. The sound level of the regular option affects the max of the EQ option.
+\*\*WARNING: You MUST max the volume of your regular sound option before switching to the `GPD Win Mini EQ` option. The sound level of the regular option affects the max of the EQ option.
 
 It should be selected by default in game mode because of priority.driver / priority.session, but you can comment those out if you want to select it manually.
 

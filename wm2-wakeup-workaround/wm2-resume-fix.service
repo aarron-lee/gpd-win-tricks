@@ -1,0 +1,11 @@
+[Unit]
+Description=On resume check for closed laptop lid
+After=suspend.target
+
+[Service]
+ExecStart=/usr/local/bin/wm2-resume-mods
+User=root
+
+[Install]
+WantedBy=suspend.target
+
