@@ -106,6 +106,8 @@ TDP Control:
   - use with PowerControl Fork for fan controls - https://github.com/aarron-lee/PowerControl
 - RGB controls plugin: https://github.com/honjow/HueSync
 
+GPD Wincontrol reverse engineered CLI tool - https://github.com/pelrun/pyWinControls
+
 More Win 4 resources: https://github.com/lertsoft/GPD_WIN4/releases
 
 Controller-friendly Youtube app (with steam input community profile) - https://github.com/Haroon01/youtube-tv-client
