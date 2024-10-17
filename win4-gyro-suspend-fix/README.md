@@ -6,6 +6,8 @@ Note that this fix has been tested on the 6800u, 7840u, and 8840u GPD Win 4 devi
 
 # Install instructions
 
+## If you're on Bazzite, YOU NO LONGER NEED THIS WORKAROUND, it should be built into Bazzite now
+
 run the following in terminal
 
 ```
