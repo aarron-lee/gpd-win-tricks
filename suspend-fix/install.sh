@@ -22,9 +22,6 @@ sudo cp ./resume-mods.sh /usr/local/bin/resume-mods
 sudo chmod +x /usr/local/bin/suspend-mods
 sudo chmod +x /usr/local/bin/resume-mods
 
-sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
-sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
-
 # disable services if they already exist
 sudo systemctl disable --now resume-fix.service
 sudo systemctl disable --now suspend-fix.service
@@ -33,9 +30,14 @@ sudo cp resume-fix.service /etc/systemd/system
 sudo cp suspend-fix.service /etc/systemd/system
 
 sudo systemctl daemon-reload
-sudo systemctl enable gyro-resume-fix.service
-sudo systemctl enable gyro-suspend-fix.service
+sudo systemctl enable resume-fix.service
+sudo systemctl enable suspend-fix.service
 
 echo "installation complete!"
 
 sudo rm -rf /tmp/gpd-win-tricks
+
+# bazzite only
+
+sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
+sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
