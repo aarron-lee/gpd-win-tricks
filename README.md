@@ -88,7 +88,7 @@ sudo systemctl daemon-reload
 
 ## GPD Win 4
 
-- Volume buttons require v3.06 or newer bios on the 6800u win 4
+- Volume buttons require v3.06 or newer bios on the 6800u win 4, found [here](https://github.com/lertsoft/GPD_WIN4/releases/tag/v3.06)
 - Gyro requires fix on Bazzite, see [here](./win4-gyro-suspend-fix/README.md)
 
 # Resources
