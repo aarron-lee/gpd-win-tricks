@@ -20,9 +20,11 @@ Also note that these devices might have issues with HDMI 2.1 on Linux.
 
 # What works?
 
-## GPD Win 4 (6800u)
+## GPD Win 4 (6800u only)
 
-All hardware, excluding the FP sensor, is usable with Linux. Note that this has only been confirmed on the 6800u and 7840u versions.
+All hardware, excluding the FP sensor, is usable with Linux. Note that this has been confirmed on the 6800u versions.
+
+7840u and 8840u models have reported suspend-resume issues.
 
 This includes the following:
 
@@ -43,11 +45,13 @@ This includes the following:
   - there is also an outdated proprietary driver [here](https://github.com/mrrbrilliant/ft9201-static)
   - another available driver [here](https://github.com/banianitc/ft9201-fingerprint-driver)
 
-### GPD Win 4 (7840u, 8840u)
+### GPD Win 4 (7840u, 8840u, newer models)
 
-Everything for the 6800u version applies, but there's been some recent reports of a potential suspend issue where it wakes up after some time in suspend.
+Everything for the 6800u version applies, but there's been reports of a suspend issue where it wakes up after some time in suspend.
 
-These are recent reports, so it's unknown on if it's due to a recent bios update, or if the issue has always been present. It strongly resembles the issue affecting the WM2 7840u/8840u, detailed bug report for the WM2 can be found [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154)
+It resembles the issue affecting the WM2 7840u/8840u, detailed bug report for the WM2 can be found [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154)
+
+Unfortunately there's no known fix, GPD would need to release a bios update to address it
 
 ## GPD Win Mini
 
@@ -72,7 +76,7 @@ The WM2 is mostly usable with Linux, but does have some bugs
 # Known bugs
 
 - gyro is borked on WM2
-- gyro on Win 4 requires a workaround
+- gyro on Win 4 requires a workaround (solved on some distros)
 - focus issue after resume from suspend, where the game controller seems to be stuck in Steam UI and not getting picked up by the game
   - solution: disable custom wake movies, see github issues [here](https://github.com/ublue-os/bazzite/issues/1474) and [here](https://github.com/ValveSoftware/SteamOS/issues/1424) for more details
 - fingerprint scanners can cause flaky suspend
