@@ -8,6 +8,10 @@ all credit goes to the original dev, @SpookOz
 
 # Install instructions
 
+# For non-bazzite users, you should try the original workaround script instead of this workaround
+
+original workaround script: https://github.com/SpookOz/spook-wm2
+
 run the following in terminal
 
 ```
