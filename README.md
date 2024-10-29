@@ -165,7 +165,9 @@ use PowerControl or PowerControl-Fork decky plugins
 
 ## GPD Win Max 2 (6800u)
 
-### Disable FP sensor on WM2 to fix suspend-resume
+### Disable FP sensor on WM2 to fix some suspend-resume issues
+
+Note that this fully fixes suspend on the 6800u WM2, but newer models have additional suspend-resume issues
 
 The fingerprint scanner has been found to cause suspend issues. Since the fingerprint scanner is non-functional on Linux, we can disable it with a udev rule
 
@@ -179,7 +181,7 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{re
 
 ### Workaround for random wakes from suspend (Experimental)
 
-See Experimental workaround, found [here](./wm2-wakeup-workaround/)
+See Experimental workaround, found [here](./wm2-wakeup-workaround/). This is primarily for newer WM2 models
 
 <!-->
 
