@@ -1,0 +1,6 @@
+[Unit]
+Description=clear waydroid desktop entries
+
+[Service]
+ExecStart=/usr/local/bin/clear-waydroid-entries
+Type=oneshot

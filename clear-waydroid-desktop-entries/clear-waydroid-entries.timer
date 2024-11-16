@@ -1,0 +1,10 @@
+[Unit]
+Description=Clear waydroid desktop entries hourly
+
+[Timer]
+Unit=clear-waydroid-entries.service
+OnBootSec=1min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
