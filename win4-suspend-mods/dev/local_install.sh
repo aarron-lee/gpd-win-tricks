@@ -17,15 +17,15 @@ sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
 sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
 
 # disable services if they already exist
-sudo systemctl disable --now gyro-resume-fix.service
-sudo systemctl disable --now gyro-suspend-fix.service
+sudo systemctl disable --now resume-mods.service
+sudo systemctl disable --now suspend-mods.service
 
-sudo cp ../gyro-resume-fix.service /etc/systemd/system
-sudo cp ../gyro-suspend-fix.service /etc/systemd/system
+sudo cp ../resume-mods.service /etc/systemd/system
+sudo cp ../suspend-mods.service /etc/systemd/system
 
 sudo systemctl daemon-reload
-sudo systemctl enable gyro-resume-fix.service
-sudo systemctl enable gyro-suspend-fix.service
+sudo systemctl enable resume-mods.service
+sudo systemctl enable suspend-mods.service
 
 echo "installation complete!"
 

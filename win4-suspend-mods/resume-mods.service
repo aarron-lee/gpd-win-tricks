@@ -1,5 +1,5 @@
 [Unit]
-Description=On Sleep disable gyro
+Description=run mods on resume
 After=suspend.target
 
 [Service]
