@@ -16,7 +16,7 @@ sudo rm /usr/local/bin/resume-mods
 sudo rm /etc/systemd/system/gyro-resume-fix.service
 sudo rm /etc/systemd/system/gyro-suspend-fix.service
 
-# end disablign of legacy version of fix
+# end disabling of legacy version of fix
 
 echo "starting install of gyro fix"
 
@@ -35,8 +35,22 @@ sudo cp ./resume-mods.sh /usr/local/bin/resume-mods
 sudo chmod +x /usr/local/bin/suspend-mods
 sudo chmod +x /usr/local/bin/resume-mods
 
-sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
-sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
+json_file="/usr/share/ublue-os/image-info.json"
+
+if [[ -f "$json_file" ]]; then
+    image_name=$(grep -oP '"image-name"\s*:\s*"\K[^"]+' "$json_file")
+
+    if [[ "$image_name" =~ bazzite ]]; then
+        echo "bazzite detected, handling for SE Linux"
+
+        sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/suspend-mods
+        sudo chcon -u system_u -r object_r --type=bin_t /usr/local/bin/resume-mods
+    else
+        echo "The image-name is not 'bazzite', it is '$image_name'."
+    fi
+else
+    echo "Bazzite not detected, continuing installation"
+fi
 
 # disable services if they already exist
 sudo systemctl disable --now resume-mods.service
