@@ -183,6 +183,20 @@ Note that this fix should already be shipping on the latest Bazzite.
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2541", ATTR{idProduct}=="9711", ATTR{remove}="1"' | sudo tee -a /etc/udev/rules.d/99-block-fingerprint.rules
 ```
 
+### GPD Win Max 2 2025 Suspend issue fix (tentative)
+
+According to user wildi630 on Discord, he managed to fix the sleep/hibernate issues thanks to https://github.com/Sabrina-Fox/WM2-Help?tab=readme-ov-file#known-wm2-2023-specific-issues-linux
+
+For the wm2 2025 he only had to disable the second i2c device:
+
+```bash
+echo disabled > /sys/bus/i2c/devices/i2c-PNP0C50:00/power/wakeup
+```
+
+he didn't need to disable any of the acpi wakeups
+
+this has not yet been thoroughly tested on multiple devices
+
 ### Workaround for random wakes from suspend (Experimental)
 
 See Experimental workaround, found [here](./wm2-wakeup-workaround/). This is primarily for newer WM2 models
