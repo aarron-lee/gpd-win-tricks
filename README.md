@@ -61,6 +61,8 @@ Users have confirmed that suspend-resume works fine for all models, all general 
 
 The only issue that you may encounter is the screen being the wrong orientation in gamescope-session/game mode. This is due to the portrait screen on the 7840u model, vs the native landscape screen on the 8840u model. This issue is easy to workaround by changing the relevant kernel arg for orientation.
 
+Trigger or joystick calibration can be done in Windows by using the GPD calibration tool. Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
+
 ## GPD Win Max 2
 
 The WM2 is mostly usable with Linux, but does have some bugs
@@ -225,6 +227,16 @@ this will add a new `GPD Win Mini EQ` device to your sound options.
 It should be selected by default in game mode because of priority.driver / priority.session, but you can comment those out if you want to select it manually.
 
 Thanks to @justinweiss on Discord for this fix
+
+## GPD Win mini 2024
+
+### Fix some crashes with eGPU + Bazzte
+
+If you are using a GPD G1 eGPU, repeated crashes due to PCIe Bus Errors can be resolved by adding 'pci=nommconf' to your kernel arguments.
+
+The following command will take care of this on Bazzite: `rpm-ostree kargs --append-if-missing="pci=nommconf"`
+
+Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
 
 # Mini-guides
 
