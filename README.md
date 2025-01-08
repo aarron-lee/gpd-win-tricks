@@ -244,6 +244,9 @@ Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
 
 source: https://www.reddit.com/r/SteamDeck/comments/17qhmpg/comment/k8dgjnq/
 
+> [!NOTE]
+>  Internal display scaling should soon be available under regular developer settings, you won't need to use the internal Valve settings once it's available
+
 Follow the below steps to enable UI scaling for the internal display:
 
 1. Install Decky Plugin loader if you haven't already.
