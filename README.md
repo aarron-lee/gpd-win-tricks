@@ -288,3 +288,15 @@ as a solution, you can create the partitions in Windows, then have the bazzite i
 https://www.reddit.com/r/gpdwin/comments/14c5cvp/i_made_a_set_of_win_4_front_covers/
 
 https://sketchfab.com/3d-models/gpd-win-4-grips-6c8c02d6dac047c6b0214a1e4384a096
+
+
+<!--
+cat /etc/udev/rules.d/50-horipad-steam-controller.rules
+# Wireless HORIPAD STEAM; Bluetooth
+KERNEL=="hidraw*", KERNELS=="*0F0D:0196*", MODE="0660", TAG+="uaccess"
+KERNEL=="hidraw*", ATTRS{idVendor}=="0f0d", ATTRS{idProduct}=="0196", MODE="0660", TAG+="uaccess"
+
+# Wired HORIPAD STEAM; USB
+KERNEL=="hidraw*", KERNELS=="*0F0D:01AB*", MODE="0660", TAG+="uaccess"
+KERNEL=="hidraw*", ATTRS{idVendor}=="0f0d", ATTRS{idProduct}=="01ab", MODE="0660", TAG+="uaccess"
+-->
