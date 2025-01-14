@@ -30,7 +30,7 @@ This includes the following:
 
 - full controller + back buttons + gyro support in Steam input via Dualsense Edge emulation (currently requires installing Handheld Daemon)
   - optical mouse nub cannot be used in steam input because it's hardware implementation makes it impossible to treat as a trackpad
-  - gyro support requires an extra fix, details [here](./win4-gyro-suspend-fix/README.md)
+  - gyro support requires an extra fix, details [here](./win4-suspend-mods/README.md)
 - TDP control can be done via either Decky Plugins or HHD
 - RGB control works via Decky Plugins
   - there is also an untested RGB driver here - https://github.com/bm16ton/gpd-win4-rgb
@@ -95,7 +95,7 @@ sudo systemctl daemon-reload
 ## GPD Win 4
 
 - Volume buttons require v3.06 or newer bios on the 6800u win 4, found [here](https://github.com/lertsoft/GPD_WIN4/releases/tag/v3.06)
-- Gyro requires fix on Bazzite, see [here](./win4-gyro-suspend-fix/README.md)
+- Gyro requires fix on Bazzite, see [here](./win4-suspend-mods/README.md)
 
 # Resources
 
@@ -153,7 +153,7 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2808", ATTR{idProduct}=="9338", ATTR{re
 
 ### Fix gyro + hhd after suspend-resume cycles
 
-read [here](./win4-gyro-suspend-fix/README.md) for instructions to setup fix.
+read [here](./win4-suspend-mods/README.md) for instructions to setup fix.
 
 Applies to the Win 4 6800u, 7840u, 8840u, and apparently also works on the Win Mini (confirmation required for Win Mini)
 
