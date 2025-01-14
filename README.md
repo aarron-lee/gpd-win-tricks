@@ -230,6 +230,14 @@ Thanks to @justinweiss on Discord for this fix
 
 ## GPD Win mini 2024
 
+### Fix default microphone device
+
+follow instructions from [this](https://universal-blue.discourse.group/t/legion-go-microphone-does-not-default-to-correct-card-in-gamemode/3215/4), but replace the node name
+
+For the node name, this should be changed to "alsa_input.pci-0000_c3_00.6.analog-stereo" instead of the guide's "alsa_input.pci-0000_c2_00.6.analog-stereo".
+
+Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
+
 ### Fix some crashes with eGPU + Bazzte
 
 If you are using a GPD G1 eGPU, repeated crashes due to PCIe Bus Errors can be resolved by adding 'pci=nommconf' to your kernel arguments.
