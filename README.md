@@ -74,6 +74,7 @@ The WM2 is mostly usable with Linux, but does have some bugs
   - newer WM2 variants (7840u, etc) have bugs with suspend, see [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154) for details
   - there is an experimental workaround that helps with suspend, see [here](#workaround-for-random-wakes-from-suspend-experimental)
 - Fan control is possible via Decky Plugin
+- (untested) according to GPD, fingerprint scanner driver is available: https://github.com/ericlinagora/libfprint-CS9711
 
 # Known bugs
 
@@ -175,7 +176,7 @@ use PowerControl or PowerControl-Fork decky plugins
 
 Note that this fully fixes suspend on the 6800u WM2, but newer models have additional suspend-resume issues
 
-The fingerprint scanner has been found to cause suspend issues. Since the fingerprint scanner is non-functional on Linux, we can disable it with a udev rule
+The fingerprint scanner has been found to cause suspend issues, we can disable it with a udev rule
 
 Note that this fix should already be shipping on the latest Bazzite.
 
