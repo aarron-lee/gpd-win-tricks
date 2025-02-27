@@ -298,6 +298,8 @@ https://www.reddit.com/r/gpdwin/comments/14c5cvp/i_made_a_set_of_win_4_front_cov
 
 https://sketchfab.com/3d-models/gpd-win-4-grips-6c8c02d6dac047c6b0214a1e4384a096
 
+https://www.thingiverse.com/thing:6656330
+
 
 <!--
 cat /etc/udev/rules.d/50-horipad-steam-controller.rules
