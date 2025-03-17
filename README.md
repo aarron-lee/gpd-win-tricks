@@ -63,6 +63,12 @@ The only issue that you may encounter is the screen being the wrong orientation 
 
 Trigger or joystick calibration can be done in Windows by using the GPD calibration tool. Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
 
+## GPD Win Mini (2025)
+
+The 2025 GPD Win mini has a different gyro, so the gyro workaround is required for to get it working. Thanks to [PluvIIter](https://github.com/aarron-lee/gpd-win-tricks/issues/8#issuecomment-2728278813) for the info.
+
+Also, the Win Mini uses a new controller. This means that previous GPD WinControl plugins are unable to modify the R4/L4 buttons. Note, even the official WinControls app still needs an update to make it work, it's not available yet. Thanks to [PluvIIter](https://github.com/aarron-lee/gpd-win-tricks/issues/8#issuecomment-2728278813) for this info.
+
 ## GPD Win Max 2
 
 The WM2 is mostly usable with Linux, but does have some bugs
