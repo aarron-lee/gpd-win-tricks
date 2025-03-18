@@ -59,6 +59,8 @@ Most of the GPD Win 4 info applies to the Win Mini, including the extra gyro fix
 
 Users have confirmed that suspend-resume works fine for all models, all general hardware (controller, bluetooth, wifi, etc) works fine, etc. There's no major reported issues.
 
+The 2024 Win Mini may require the  [gyro workaround](./win4-suspend-mods/README.md), it should be the same workaround as the one for the 2025 win mini. Thanks to [PluvIIter](https://github.com/aarron-lee/gpd-win-tricks/issues/8 and Reddit reports
+
 The only issue that you may encounter is the screen being the wrong orientation in gamescope-session/game mode. This is due to the portrait screen on the 7840u model, vs the native landscape screen on the 8840u model. This issue is easy to workaround by changing the relevant kernel arg for orientation.
 
 Trigger or joystick calibration can be done in Windows by using the GPD calibration tool. Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
