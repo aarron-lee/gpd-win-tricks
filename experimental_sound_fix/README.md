@@ -2,6 +2,8 @@
 
 Experimental sound convolver for the GPD Win 4 and WM2
 
+For the GPD Pocket 4, see [here](https://kittenlabs.de/blog/2025/04/06/gpd-pocket-4-speaker-dsp/) and [github repo here](https://github.com/Manawyrm/gpd-pocket-4-pipewire)
+
 # Install instructions
 
 run the following in terminal:
