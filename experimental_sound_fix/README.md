@@ -1,6 +1,6 @@
 # Experimental Sound Fix
 
-Experimental sound convolver for the GPD Win 4 and WM2
+Experimental sound convolver for the GPD Win 4 and WM2, based on [Legion Go variant](https://github.com/aarron-lee/legion-go-tricks/tree/main/experimental_sound_fix)
 
 For the GPD Pocket 4, see [here](https://kittenlabs.de/blog/2025/04/06/gpd-pocket-4-speaker-dsp/) and [github repo here](https://github.com/Manawyrm/gpd-pocket-4-pipewire)
 
