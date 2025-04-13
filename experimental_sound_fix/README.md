@@ -37,3 +37,7 @@ rm $HOME/.config/pipewire/pipewire.conf.d/convolver.conf
 rm $HOME/.config/pipewire/game.wav
 systemctl --user restart --now wireplumber pipewire pipewire-pulse
 ```
+
+# Credits
+
+uses game.wav from matte-schwartz's repo [here](https://github.com/matte-schwartz/device-quirks/blob/main/usr/share/device-quirks/scripts/asus/ally/pipewire/game.wav)
