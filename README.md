@@ -84,6 +84,14 @@ The WM2 is mostly usable with Linux, but does have some bugs
 - Fan control is possible via Decky Plugin
 - (untested) according to GPD, fingerprint scanner driver is available: https://github.com/ericlinagora/libfprint-CS9711
 
+# GPD Win 2 (m3-7y30)
+
+Mostly functional with Bazzite, you may encounter a bug where the screen is blank/black during the install process. Workaround is to plug in an external monitor, display via usb-c adapter should work fine too.
+
+You can use SDTDP for basic EPP/governor controls. TDP controls don't work at the moment.
+
+See here for fan fix: https://github.com/aarron-lee/bazzite-win2
+
 # Known bugs
 
 - gyro is borked on WM2
