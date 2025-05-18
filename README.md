@@ -86,11 +86,9 @@ The WM2 is mostly usable with Linux, but does have some bugs
 
 # GPD Win 2 (m3-7y30)
 
-Mostly functional with Bazzite, you may encounter a bug where the screen is blank/black during the install process. Workaround is to plug in an external monitor, display via usb-c adapter should work fine too.
+Mostly functional with Bazzite, but requires some manual fixes + workarounds. See [here](./win2) for fixes and workarounds.
 
-You can use SDTDP for basic EPP/governor controls. TDP controls don't work at the moment.
-
-See here for fan fix: https://github.com/aarron-lee/bazzite-win2
+You may encounter a bug where the screen is blank/black during the install process. Workaround is to plug in an external monitor while booting the installer, display via usb-c adapter should work fine too.
 
 # Known bugs
 
