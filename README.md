@@ -114,7 +114,7 @@ sudo systemctl daemon-reload
 
 # Resources
 
-HHD Decky Plugin - https://github.com/hhd-dev/hhd-decky
+HHD Decky Plugin - https://github.com/aarron-lee/hhd-decky
 
 RGB Control + Button Remapping
 
