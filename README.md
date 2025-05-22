@@ -90,6 +90,8 @@ Mostly functional with Bazzite, but requires some manual fixes + workarounds. Se
 
 You may encounter a bug where the screen is blank/black during the install process. Workaround is to plug in an external monitor while booting the installer, display via usb-c adapter should work fine too.
 
+Remember to loosen the hinge if it's really tight, a tight hinge can eventually lead to damaging your device. See [here](https://old.reddit.com/r/gpdwin/comments/bpv7dp/gpd_win2_how_to_loosen_your_hinge/) for instructions on loosening it (in case of dead link, mirror [here](./win2/tighten_hinge.md)).
+
 # Known bugs
 
 - gyro is borked on WM2
