@@ -17,7 +17,13 @@ You may encounter a bug where the screen is blank/black during the install proce
 curl -L https://github.com/aarron-lee/gpd-win-tricks/raw/main/win2/bazzite_fix.sh | sh
 ```
 
-You can use [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) for EPP and power governor controls, unfortunately TDP controls currently don't work. You can disable TDP controls in SDTDP's settings.
+For better controller support, you can install a fork of hhd with support for the win 2. The GPD Win 2's identifier (dmi) unfortunately is `Default string`, which makes it impractical for upstream hhd to identify the device properly. You should be able to install it with the following in terminal:
+
+```bash
+curl -L https://github.com/aarron-lee/hhd/raw/gpdwin2/dev/bazzite_hhd_local_install.sh | sh
+```
+
+You can use [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) for TDP, EPP, and power governor controls.
 
 You can also use [steam-powerbuttond](https://github.com/ShadowBlip/steam-powerbuttond) for to get the power button to sleep the device.
 
