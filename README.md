@@ -10,6 +10,7 @@ Info on running linux on GPD Win devices.
 - [Mini Guides](#mini-guides)
   - [How to change display scaling on internal display](#how-to-change-display-scaling-on-internal-display)
   - [How do gamescope scaling options work?](#how-to-use-steams-scaling-features-such-as-int-scaling-fsr-etc)
+  - [configuring ryzenadj](#configuring-ryzenadj)
 - [3D prints](#3d-prints)
 
 # Current Status of Linux on GPD Devices
@@ -235,15 +236,7 @@ Note that the Win 4 gyro fix can also help fix odd suspend behavior on the Win M
 
 ### Sound EQ
 
-place the `sink-eq6.conf` file in `~/.config/pipewire/filter-chain.conf.d/` directory
-
-this will add a new `GPD Win Mini EQ` device to your sound options.
-
-\*\*WARNING: You MUST max the volume of your regular sound option before switching to the `GPD Win Mini EQ` option. The sound level of the regular option affects the max of the EQ option.
-
-It should be selected by default in game mode because of priority.driver / priority.session, but you can comment those out if you want to select it manually.
-
-Thanks to @justinweiss on Discord for this fix
+see [win mini equalizer](./win_mini_equalizer)
 
 ## GPD Win mini 2024
 
@@ -267,6 +260,8 @@ Thanks [@Trossaloss](https://github.com/aarron-lee/gpd-win-tricks/issues/6)!
 
 ### How to change display scaling on internal display
 
+Note, this should no longer be necessary with the latest Steam client, Steam now exposes display scaling options by default.
+
 Follow the below steps to enable UI scaling for the internal display:
 
 1. In Steam Game mode, under system settings enable Developer mode
@@ -285,6 +280,10 @@ Full guide here: https://medium.com/@mohammedwasib/a-guide-to-a-good-docked-gami
 Reddit discussion [here](https://www.reddit.com/r/SteamDeck/comments/z90ca0/a_guide_to_a_good_docked_gaming_experience_on_the/)
 
 PDF Mirror of guide [here](https://github.com/aarron-lee/legion-go-tricks/blob/main/steam-resolutions-guide.pdf)
+
+### configuring ryzenadj
+
+If you wish to configure ryzenadj so that you can use the `-i` flag, see relevant info [here](https://github.com/aarron-lee/SimpleDeckyTDP?tab=readme-ov-file#ryzenadj-troubleshooting)
 
 ### failure to partition for dual boot
 
