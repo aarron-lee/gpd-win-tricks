@@ -12,7 +12,7 @@ mkdir -p $HOME/.config/pipewire/pipewire.conf.d/
 
 curl -L "https://github.com/aarron-lee/gpd-win-tricks/raw/main/win_mini_equalizer/sink-eq10.conf" -o $HOME/.config/pipewire/pipewire.conf.d/sink-eq10.conf
 
-systemctl —user restart wireplumber pipewire pipewire-pulse
+systemctl --user restart wireplumber pipewire pipewire-pulse
 ```
 
 3. Go back to game mode, go to settings -> audio, make sure the output is pointing to “GPD win mini EQ”
