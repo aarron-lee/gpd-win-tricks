@@ -31,6 +31,18 @@ You can also use [steam-powerbuttond](https://github.com/ShadowBlip/steam-powerb
 curl -L https://github.com/ShadowBlip/steam-powerbuttond/raw/main/bazzite_install.sh | sh
 ```
 
+If you find your screen rotated 90 degrees in gaming mode, first confirm your screen id with `kscreen-doctor`:
+```bash
+kscreen-doctor -o
+```
+On line 1, it should show:
+```bash
+Output: 1 eDP-1
+```
+use the following command to update launch parameters to fix the screen orientation. if your screen id is different, replace `eDP-1` with screen id. 
+```bash
+sudo rpm-ostree kargs --append-if-missing=video=eDP-1:panel_orientation=right_side_up
+```
 # Attribution
 
 Major thanks to paco for figuring out the issues for the GPD Win 2, you can see his original repo here: https://github.com/pacoa-kdbg/chimeraOS-win2
