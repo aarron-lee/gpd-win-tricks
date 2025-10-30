@@ -58,7 +58,7 @@ Unfortunately there's no known fix, GPD would need to release a bios update to a
 
 Most of the GPD Win 4 info applies to the Win Mini, including the extra gyro fix. The Win Mini has no FP sensor, so that does not apply.
 
-Users have confirmed that suspend-resume works fine for all models, all general hardware (controller, bluetooth, wifi, etc) works fine, etc. There's no major reported issues.
+Users have confirmed that suspend-resume should work fine for all models, all general hardware (controller, bluetooth, wifi, etc) works fine, etc. There's no major reported issues.
 
 The 2024 Win Mini may require the  [gyro workaround](./win4-suspend-mods/README.md), it should be the same workaround as the one for the 2025 win mini. Thanks to [PluvIIter](https://github.com/aarron-lee/gpd-win-tricks/issues/8) and Reddit reports
 
@@ -69,6 +69,8 @@ Trigger or joystick calibration can be done in Windows by using the GPD calibrat
 ## GPD Win Mini (2025)
 
 The 2025 GPD Win mini has a different gyro, so the [gyro workaround](./win4-suspend-mods/README.md) is required for to get it working. Thanks to [PluvIIter](https://github.com/aarron-lee/gpd-win-tricks/issues/8#issuecomment-2728278813) for the info.
+
+There's been a report of gyro not being fully functional on the GPD Win mini 2025 with official SteamOS. This is being investigated.
 
 Also, the Win Mini uses a new controller. This means that previous GPD WinControl plugins are unable to modify the R4/L4 buttons. Note, even the official WinControls app still needs an update to make it work, it's not available yet. Thanks to [PluvIIter](https://github.com/aarron-lee/gpd-win-tricks/issues/8#issuecomment-2728278813) for this info.
 
