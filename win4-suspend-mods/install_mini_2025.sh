@@ -5,20 +5,25 @@ if [ "$(id -u)" -eq 0 ]; then
     exit 1
 fi
 
-echo "disabling legacy version of fix, assuming it was previously installed"
+echo "----------------------------"
+echo "Removing old versions of this workaround, assuming it was previously installed"
+echo "Note: You can ignore any error messages until the INSTALL step"
+echo "----------------------------"
 
 sudo systemctl disable --now gyro-resume-fix.service
 sudo systemctl disable --now gyro-suspend-fix.service
 
-sudo rm /usr/local/bin/suspend-mods
-sudo rm /usr/local/bin/resume-mods
+sudo rm -f /usr/local/bin/suspend-mods
+sudo rm -f /usr/local/bin/resume-mods
 
-sudo rm /etc/systemd/system/gyro-resume-fix.service
-sudo rm /etc/systemd/system/gyro-suspend-fix.service
+sudo rm -f /etc/systemd/system/gyro-resume-fix.service
+sudo rm -f /etc/systemd/system/gyro-suspend-fix.service
 
 # end disabling of legacy version of fix
 
-echo "starting install of gyro fix"
+echo "----------------------------"
+echo "INSTALL starting - gyro fix"
+echo "----------------------------"
 
 # remove if somehow already present
 sudo rm -rf /tmp/gpd-win-tricks
