@@ -8,6 +8,12 @@ Misc: Remember to loosen the hinge if it's really tight, a tight hinge can event
 
 You may encounter a bug where the screen is blank/black during the install process. Workaround is to plug in an external monitor while booting the installer, display via usb-c adapter should work fine too.
 
+# Suspend fix
+
+from bug report: With a clean Bazzite install on a GPD Win 2, in Gaming Mode, selecting Power > Sleep results in the screen turning off for 15-30 seconds, then turning back on again. The fan never turns off. The problem doesn't occur in Desktop Mode.
+
+See fix in github issue [here](https://github.com/aarron-lee/gpd-win-tricks/issues/15)
+
 # Fan Control
 
 This uses nbfc for fan controls.
@@ -61,6 +67,7 @@ use the following command to update launch parameters to fix the screen orientat
 ```bash
 sudo rpm-ostree kargs --append-if-missing=video=eDP-1:panel_orientation=right_side_up
 ```
+
 # Attribution
 
 Major thanks to paco for figuring out the issues for the GPD Win 2, you can see his original repo here: https://github.com/pacoa-kdbg/chimeraOS-win2
