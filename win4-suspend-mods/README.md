@@ -8,17 +8,9 @@ Note that this fix has been tested on the 6800u, 7840u, and 8840u GPD Win 4 devi
 
 # Install instructions
 
-## If you're on Bazzite + ChimeraOS, YOU NO LONGER NEED THIS WORKAROUND for the Win 4, it should be shipping on both now
-
-## the Win Mini 2025 currently still needs this workaround. The win mini 2024 might also need this workaround
-
 run the following in terminal
 
 ```bash
-# for the GPD Win Mini 2025
-curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/main/win4-suspend-mods/install_mini_2025.sh | sh
-
-# for the GPD Win 4 / Win Mini 2024
 curl -L https://raw.githubusercontent.com/aarron-lee/gpd-win-tricks/main/win4-suspend-mods/install.sh | sh
 ```
 
